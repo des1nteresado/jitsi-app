@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Hello world</title>
+        <meta name="description" content="The HTML5 Herald" />
+        <meta name="author" content="SitePoint" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://meet.jit.si/external_api.js"></script>
+        <script>
+            $(document).ready(function () {
+                var domain = "meet.jit.si";
+
+                var options = {
+                    roomName: "JitsiMeetAPIExample",
+                    width: 700,
+                    height: 700,
+                    parentNode: document.querySelector("#meet"),
+                };
+                var api = new JitsiMeetExternalAPI(domain, options);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>My Jitsi Meeting</h1>
+        <div id="meet">
+            meeting
+        </div>
+    </body>
+</html>
